@@ -1,0 +1,253 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="StudentMasterPage.master.cs" Inherits="Students_StudentMasterPage" %>
+
+<%@ Register src="../UserControls/BindImage.ascx" tagname="BindImage" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head id="Head1" runat="server">
+    <title>Farmers' Buddy|Farmers' Page</title>
+    <link href="../Images/iari-style.css" rel="stylesheet" type="text/css" />
+
+    <script src="../demo1.js" type="text/javascript"></script>
+
+  
+
+    <style>
+        .menuskin
+        {
+            border-right: orange 2px solid;
+            border-top: orange 2px solid;
+            z-index: 100;
+            visibility: hidden;
+            font: 12px/18px arial;
+            border-left: orange 2px solid;
+            width: 165px;
+            border-bottom: orange 2px solid;
+            position: absolute;
+            background-color: #fce49c;
+        }
+        .menuskin A
+        {
+            padding-right: 10px;
+            padding-left: 10px;
+            color: #000000;
+            text-decoration: none;
+        }
+        #mouseoverstyle
+        {
+            background-color: #826603;
+        }
+        #mouseoverstyle A
+        {
+            color: #ffffff;
+        }
+    </style>
+
+    <script language="JavaScript1.2">
+
+//Pop-it menu- By Dynamic Drive
+//For full source code and more DHTML scripts, visit http://www.dynamicdrive.com
+//This credit MUST stay intact for use
+
+var linkset=new Array()
+//SPECIFY MENU SETS AND THEIR LINKS. FOLLOW SYNTAX LAID OUT
+
+
+linkset[0]='<div class="menuitems"><a href="http://www.iari.res.in/organisation.php">Organisation Setup</a></div>'
+linkset[0]+='<hr>' //Optional Separator
+linkset[0]+='<div class="menuitems"><a href="http://www.iari.res.in/organisation-setup/director.php">Director</a></div>'
+linkset[0]+='<div class="menuitems"><a href="http://www.iari.res.in/organisation-setup/jdr.php">Jt.Director (Res.)</a></div>'
+linkset[0]+='<div class="menuitems"><a href="http://www.iari.res.in/organisation-setup/jde.php">Jt.Director (Edu.)</a></div>'
+linkset[0]+='<div class="menuitems"><a href="http://www.iari.res.in/organisation-setup/jdex.php">Jt.Director (Ext.)</a></div>'
+
+
+linkset[1]='<div class="menuitems"><a href="http://www.iari.res.in/schools.php">Schools</a></div>'
+linkset[1]+='<hr>' //Optional Separator
+linkset[1]+='<div class="menuitems"><a href="http://www.iari.res.in/schools/basic-sciences.php">Basic Sciences </a></div>'
+linkset[1]+='<div class="menuitems"><a href="http://www.iari.res.in/schools/crop-improvement.php">Crop Improvements</a></div>'
+linkset[1]+='<div class="menuitems"><a href="http://www.iari.res.in/schools/crop-protection.php">Crop Protection</a></div>'
+linkset[1]+='<div class="menuitems"><a href="http://www.iari.res.in/schools/resources-management.php">Resources Mgmt.</a></div>'
+linkset[1]+='<div class="menuitems"><a href="http://www.iari.res.in/schools/social-sciences.php">Social Sciences</a></div>'
+
+linkset[2]='<div class="menuitems"><a href="http://www.iari.res.in/pgschool.php">P.G.School</a></div>'
+linkset[2]+='<hr>' //Optional Separator
+<!--linkset[2]+='<div class="menuitems"><a href="http://www.iari.res.in/pgschool/award_nomination/index.html" target="_blank">Awards</a></div>'-->
+linkset[2]+='<div class="menuitems"><a href="http://www.iari.res.in/pgschool/info_bulletin.php">Ph.D Info Bulletin</a></div>'
+linkset[2]+='<div class="menuitems"><a href="http://www.iari.res.in/pgschool/pgssu.php">Students\' Union</a></div>'
+
+
+linkset[3]='<div class="menuitems"><a href="http://www.iari.res.in/reports.php">Reports</a></div>'
+linkset[3]+='<hr>' //Optional Separator
+linkset[3]+='<div class="menuitems"><a href="http://www.iari.res.in/report_iari/externalfun/exter_fundpr.html">External Funded Projects</a></div>'
+
+////No need to edit beyond here
+
+var ie4=document.all&&navigator.userAgent.indexOf("Opera")==-1
+var ns6=document.getElementById&&!document.all
+var ns4=document.layers
+
+function showmenu(e,which){
+
+if (!document.all&&!document.getElementById&&!document.layers)
+return
+
+clearhidemenu()
+
+menuobj=ie4? document.all.popmenu : ns6? document.getElementById("popmenu") : ns4? document.popmenu : ""
+menuobj.thestyle=(ie4||ns6)? menuobj.style : menuobj
+
+if (ie4||ns6)
+menuobj.innerHTML=which
+else{
+menuobj.document.write('<layer name=gui bgColor=#E6E6E6 width=165 onmouseover="clearhidemenu()" onmouseout="hidemenu()">'+which+'</layer>')
+menuobj.document.close()
+}
+
+menuobj.contentwidth=(ie4||ns6)? menuobj.offsetWidth : menuobj.document.gui.document.width
+menuobj.contentheight=(ie4||ns6)? menuobj.offsetHeight : menuobj.document.gui.document.height
+eventX=ie4? event.clientX : ns6? e.clientX : e.x
+eventY=ie4? event.clientY : ns6? e.clientY : e.y
+
+//Find out how close the mouse is to the corner of the window
+var rightedge=ie4? document.body.clientWidth-eventX : window.innerWidth-eventX
+var bottomedge=ie4? document.body.clientHeight-eventY : window.innerHeight-eventY
+
+//if the horizontal distance isn't enough to accomodate the width of the context menu
+if (rightedge<menuobj.contentwidth)
+//move the horizontal position of the menu to the left by it's width
+menuobj.thestyle.left=ie4? document.body.scrollLeft+eventX-menuobj.contentwidth : ns6? window.pageXOffset+eventX-menuobj.contentwidth : eventX-menuobj.contentwidth
+else
+//position the horizontal position of the menu where the mouse was clicked
+menuobj.thestyle.left=ie4? document.body.scrollLeft+eventX : ns6? window.pageXOffset+eventX : eventX
+
+//same concept with the vertical position
+if (bottomedge<menuobj.contentheight)
+menuobj.thestyle.top=ie4? document.body.scrollTop+eventY-menuobj.contentheight : ns6? window.pageYOffset+eventY-menuobj.contentheight : eventY-menuobj.contentheight
+else
+menuobj.thestyle.top=ie4? document.body.scrollTop+event.clientY : ns6? window.pageYOffset+eventY : eventY
+menuobj.thestyle.visibility="visible"
+return false
+}
+
+function contains_ns6(a, b) {
+//Determines if 1 element in contained in another- by Brainjar.com
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+function hidemenu(){
+if (window.menuobj)
+menuobj.thestyle.visibility=(ie4||ns6)? "hidden" : "hide"
+}
+
+function dynamichide(e){
+if (ie4&&!menuobj.contains(e.toElement))
+hidemenu()
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+hidemenu()
+}
+
+function delayhidemenu(){
+if (ie4||ns6||ns4)
+delayhide=setTimeout("hidemenu()",500)
+}
+
+function clearhidemenu(){
+if (window.delayhide)
+clearTimeout(delayhide)
+}
+
+function highlightmenu(e,state){
+if (document.all)
+source_el=event.srcElement
+else if (document.getElementById)
+source_el=e.target
+if (source_el.className=="menuitems"){
+source_el.id=(state=="on")? "mouseoverstyle" : ""
+}
+else{
+while(source_el.id!="popmenu"){
+source_el=document.getElementById? source_el.parentNode : source_el.parentElement
+if (source_el.className=="menuitems"){
+source_el.id=(state=="on")? "mouseoverstyle" : ""
+}
+}
+}
+}
+
+if (ie4||ns6)
+document.onclick=hidemenu
+
+    </script>
+
+</head>
+<body bgcolor="#60593f">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    
+    <table bordercolor="#000000" cellspacing="0" cellpadding="0" width="700" align="center"
+        bgcolor="#ffffff" border="0" valign="top">
+        <tbody>
+            <tr>
+                <td style="background-color:#FCF4DD">
+                    <div align="center" bgcolor="#FCF4DD">
+                        <img height="125" src="../Images/Main_image.jpg" width="702">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#003300">
+                    <p>
+                        <center>
+                            <b><font face="arial" color="#ffffff" size="2">
+                                <!-- <a class="top" href="http://www.iari.res.in/index.php">Home</a> |-->
+                                <a class="top" href="frmStudentHome.aspx" >Home</a> | <a class="top"
+                                    href="frmProfileManagement.aspx">Profile Info</a> | <a class="top"
+                                        href="frmPostQuestion.aspx">Ask Question</a> | <a class="top" href="frmDisplayAnswers.aspx">
+                                            Answers</a> | <a class="top" href="frmDisplayScheules.aspx">OnLine Training</a>
+                                |
+                                <!-- <a class="top" href="http://www.iari.res.in/sale.php">Publicity/Sale</a> |-->
+                                <a class="top" href="frmStudentInbox.aspx">E-Mail</a>&nbsp;| <a class="top" href="frmStudentChatRoom.aspx">
+                                        Chat</a> | <a class="top" href="frmSignOut.aspx">SignOut</a>
+                            </font></b>
+                        </center>
+                        <font color="#ffffff" size="1">&nbsp;</font>
+                </td>
+            </tr>
+            <tr><td style="background-color: #FCF4DD">
+               
+                <uc1:BindImage ID="BindImage1" runat="server" />
+                 <asp:Label ID="lblName" runat ="server" Visible ="False" Font-Bold="True" 
+                    Font-Size="XX-Small" ></asp:Label>
+                </td></tr>
+            <tr>
+                <td height="400px" valign="top" style="background-color: #FCF4DD">
+                    <div style="overflow:auto;background-color: #FCF4DD">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    </td></tr>
+   <tr>
+        <td height="1" >
+            <img height="1" src="images/teal_dot.gif" width="100%">
+        </td>
+    </tr>
+    <tr>
+        <td style="background-color:#33CC33">
+            <center>
+                <font size="-1">Welcome To Farmer&#39;s Buddy Portal</font></center>
+        </td>
+    </tr>
+    <tr>
+        <td height="1">
+            &nbsp;
+        </td>
+    </tr>
+    </tbody></table>
+    </form>
+</body>
+</html>

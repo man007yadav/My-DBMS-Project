@@ -1,0 +1,12 @@
+<?wpl version="1.0"?>
+<smil>
+    <head>
+        <meta name="Generator" content="Microsoft Windows Media Player -- 9.0.0.3250"/>
+        <title>SugarCaneCutterPlant</title>
+    </head>
+    <body>
+        <seq>
+            <media src="http://agricoop.nic.in/movieclips/sugar-cutter-planter.mpg"/>
+        </seq>
+    </body>
+</smil>

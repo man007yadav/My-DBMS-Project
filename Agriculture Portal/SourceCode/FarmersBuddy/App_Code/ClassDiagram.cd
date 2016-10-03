@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Cls_EmailMaster">
+    <Position X="10.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>LAAAAQAAACEABEABggAEAEIQQAJgBYACAAAAACAAQAE=</HashCode>
+      <FileName>App_Code\Classes\BOL\Cls_EmailMaster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clsAdministration">
+    <Position X="0.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\Classes\BOL\clsAdministration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clsArticles">
+    <Position X="4.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIgAAAEAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>App_Code\Classes\BOL\clsArticles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clsCropInformation">
+    <Position X="14" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAgAAAAAhQIAAlAAAAAAQAQAAAAAAAAAAAQAAUgA=</HashCode>
+      <FileName>App_Code\Classes\BOL\clsCropInformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clsGovtLoans">
+    <Position X="0.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DQAgCAAAAAAACgIAAAAAAAAAAAAAAAAAACDAAEBAAAA=</HashCode>
+      <FileName>App_Code\Classes\BOL\clsGovtLoans.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clsGovtSchems">
+    <Position X="12.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KQAAAAAAABCgAAAAAAACAAAAAAAABAAAAAAAoABAQAA=</HashCode>
+      <FileName>App_Code\Classes\BOL\clsGovtSchems.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clsInsuranceDetails">
+    <Position X="2.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAQAEAAAACAAAACAoAAAAACAQAAAAAAAAA=</HashCode>
+      <FileName>App_Code\Classes\BOL\clsInsuranceDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clsMarketPrices">
+    <Position X="14" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAQACAAAAAAAAAAAACABAAAAAAAAgAAEAhCAAAAE=</HashCode>
+      <FileName>App_Code\Classes\BOL\clsMarketPrices.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clsOfficerRegistration">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAEAgAAAAAAAAAAQAI=</HashCode>
+      <FileName>App_Code\Classes\BOL\clsOfficerRegistration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clsOnlineTraining">
+    <Position X="12.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABCEAAiAEBAACAAAAgAAAAAAAAEAAQABAAAEAA=</HashCode>
+      <FileName>App_Code\Classes\BOL\clsOnlineTraining.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clsQuestionAnswers">
+    <Position X="10.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBAAAEAAAAAAAAAAAAAQAAgAAABAAAAEAAQAAgQAAAQ=</HashCode>
+      <FileName>App_Code\Classes\BOL\clsQuestionAnswers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clsRegions">
+    <Position X="4.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQACAAAAAAAAAAAAAAIAAAAAAAAAAAAAEBBABEA=</HashCode>
+      <FileName>App_Code\Classes\BOL\clsRegions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clsStudentRegistration">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAACAAAADAAAAAAAAIEAAAQCAACAQAAAQASAAA=</HashCode>
+      <FileName>App_Code\Classes\BOL\clsStudentRegistration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clsUserLogin">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="clsStudentRegistration" ManuallyRouted="true">
+      <Path>
+        <Point X="4.25" Y="2.063" />
+        <Point X="4.75" Y="2.063" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAwCAAAAAAAAAgAAEAIgAAAAAEAgAgABAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\Classes\BOL\clsUserLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIUtilities">
+    <Position X="8.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAQAAAgAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>App_Code\Classes\BOL\UIUtilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chat">
+    <Position X="12.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQEAAAAAAIAAAAAAAAAAAQAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>App_Code\Classes\Chat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clsConnection">
+    <Position X="8.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>App_Code\Classes\Connection\clsConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FormersBuddy.DAL.SqlHelper">
+    <Position X="14" Y="0.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="FormersBuddy.DAL.SqlHelper.SqlConnectionOwnership" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>App_Code\Classes\DAL\SQLHelper.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AACAAACAAAAAACAEABAAAEAAgAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\Classes\DAL\SQLHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FormersBuddy.DAL.SqlHelperParameterCache">
+    <Position X="8.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAECAAIAAAAAAAARAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\Classes\DAL\SQLHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
